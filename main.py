@@ -26,7 +26,7 @@ with open('nb_model-2.pkl', 'rb') as model_file:
     nb_model = pickle.load(model_file)
 with open('count_vect.pkl', 'rb') as count_vect_file:
     count_vect = pickle.load(count_vect_file)
-with open('tfidf_transformer.pkl', 'rb') as tfidf_transformer_file:
+with open('tfidf_vectorizer.pkl', 'rb') as tfidf_transformer_file:
     tfidf_transformer = pickle.load(tfidf_transformer_file)
 df = pd.read_csv('UpdatedResumeDataSet.csv', encoding='ISO-8859-1')
 
