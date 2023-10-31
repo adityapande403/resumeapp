@@ -33,23 +33,6 @@ with open('count_vect.pkl', 'rb') as count_vect_file:
 df = pd.read_csv('UpdatedResumeDataSet.csv', encoding='ISO-8859-1')
 
 
-# In[10]:
-
-
-@app.get('/')
-def index():
-    return{'message': 'Hello'}
-
-
-# In[11]:
-
-
-@app.get('/{Name}')
-def get_name(name:str):
-    return {'message':'hello,{name}'  }
-
-
-# In[18]:
 
 
 from fastapi import FastAPI, File, UploadFile
@@ -66,7 +49,7 @@ app = FastAPI()
 
 
 
-def convertPDFtoText(pdf_file):
+def convertPDFtoText(pdf_file:UploadFile):
     output_string = io.StringIO()
     rsrcmgr = PDFResourceManager()
     laparams = LAParams()
