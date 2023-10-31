@@ -66,15 +66,15 @@ app = FastAPI()
 
 
 
-def convertPDFtoText(pdf_file: UploadFile):
+def convertPDFtoText(pdf_file):
     output_string = io.StringIO()
     rsrcmgr = PDFResourceManager()
     laparams = LAParams()
     device = TextConverter(rsrcmgr, output_string, laparams=laparams)
     
-    with open(path, 'rb') as fp:
+    with pdf_file.file:
         interpreter = PDFPageInterpreter(rsrcmgr, device)
-        for page in PDFPage.get_pages(fp):
+        for page in PDFPage.get_pages(pdf_file.file):
             interpreter.process_page(page)
     
     text = output_string.getvalue()
