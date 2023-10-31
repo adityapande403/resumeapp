@@ -21,7 +21,7 @@ import spacy
 import pickle
 import torch
 app = fapi()
-uvicorn.run(app, host="0.0.0.0", port=8000)
+
 
 with open('nb_model-2.pkl', 'rb') as model_file:
     nb_model = pickle.load(model_file)
