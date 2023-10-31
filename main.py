@@ -2,6 +2,7 @@
 # coding: utf-8
 
 # In[13]:
+uvicorn.run(app, host="0.0.0.0", port=8000)
 
 import pandas as pd
 import re
