@@ -10,7 +10,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
 import uvicorn
-import scipy
+import scipy.sparse
 from fastapi import FastAPI as fapi
 from resume import resume
 from sklearn.feature_extraction.text import CountVectorizer
