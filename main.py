@@ -26,8 +26,7 @@ with open('nb_model-2.pkl', 'rb') as model_file:
     nb_model = pickle.load(model_file)
 with open('count_vect.pkl', 'rb') as count_vect_file:
     count_vect = pickle.load(count_vect_file)
-with open('tfidf_vectorizer.pkl', 'rb') as tfidf_transformer_file:
-    tfidf_transformer = pickle.load(tfidf_transformer_file)
+
 df = pd.read_csv('UpdatedResumeDataSet.csv', encoding='ISO-8859-1')
 
 
@@ -131,7 +130,7 @@ def summarize(text, num_sentences=10):
 
 def predict_job_category(text:str):
     
-    
+    tfidf_transformer = TfidfTransformer()
     # Create a pipeline with CountVectorizer and Multinomial Naive Bayes
     text_clf = Pipeline([('vect', count_vect), ('tfidf', tfidf_transformer), ('clf', nb_model)])
     
