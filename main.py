@@ -19,7 +19,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 
 import pickle
-import torch
+
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 app = fapi()
