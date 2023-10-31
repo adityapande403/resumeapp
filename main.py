@@ -44,6 +44,10 @@ import io
 import math
 
 app = FastAPI()
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to the root path!"}
+
 
 @app.post('/texttopdf')
 
