@@ -20,6 +20,8 @@ from sklearn.pipeline import Pipeline
 import spacy
 import pickle
 import torch
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
 app = fapi()
 
 
