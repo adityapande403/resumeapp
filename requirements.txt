@@ -9,4 +9,4 @@ pdfminer
 pydantic
 torch
 tensorflow
-spacy
+
