@@ -2,7 +2,7 @@ fastapi
 uvicorn
 pandas
 numpy
-scipy 
+scipy == 1.11.3
 scikit-learn
 nltk
 pdfminer
