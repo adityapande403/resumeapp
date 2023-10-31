@@ -66,7 +66,7 @@ app = FastAPI()
 
 
 
-def convertPDFtoText(path):
+def convertPDFtoText(pdf_file: UploadFile):
     output_string = io.StringIO()
     rsrcmgr = PDFResourceManager()
     laparams = LAParams()
