@@ -10,4 +10,4 @@ pydantic
 torch
 tensorflow
 spacy
-scipy
+
