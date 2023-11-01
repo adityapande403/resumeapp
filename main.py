@@ -49,6 +49,7 @@ async def read_root():
     return {"message": "Welcome to the root path!"}
 
 
+@app.head('/texttopdf')
 @app.post('/texttopdf')
 
 
@@ -72,6 +73,7 @@ def convertPDFtoText(pdf_file:UploadFile):
     return text
 
 # Define your text summarization logic here
+@app.head('/summarise')
 @app.post('/summarise')
 def summarize(text, num_sentences=10):
   
@@ -115,7 +117,7 @@ def summarize(text, num_sentences=10):
   
   summarized = '. '.join([text.split('.')[idx] for idx in top_idx])
   return summarized
-
+@app.head('/predict_job_category')
 @app.post('/predict_job_category')
 
 def predict_job_category(text:str):
