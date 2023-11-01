@@ -19,7 +19,8 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 
 import pickle
-
+nltk.download('wordnet')
+nltk.download('punkt')
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 app = fapi()
